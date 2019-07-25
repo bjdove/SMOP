@@ -3,7 +3,7 @@ Synthea Mass Opiod Project
 
 Dallas Py-R Project - Public Market Team
 
-This project is designed to show how kubernetes-based technologies can provide value when deploying, running, and managing applications. The application itself shows how a life sciences company can improve Oncology Research and Clinical Trials through improved engagement with patients using IoT devices. This application uses several IBM Cloud cognitive and data services with Node-Red at the core of the workload flow. The application is deployed into IKS and ICP for a multi-cloud deployment scenario to achieve resiliency & availability. Monitoring & management is accomplished using IBM's Multi-cloud manager.
+This project is designed to show how the IBM Watson suite of technologies can provide value in a practical way for data science applications. The data for this Application is based on Synthea or the Synthetic Patient Population Simulator. application itself shows how a life sciences company can improve Oncology Research and Clinical Trials through improved engagement with patients using IoT devices. This application uses several IBM Cloud cognitive and data services with Node-Red at the core of the workload flow. The application is deployed into IKS and ICP for a multi-cloud deployment scenario to achieve resiliency & availability. Monitoring & management is accomplished using IBM's Multi-cloud manager.
 Getting Started
 
 The following documentation will discuss the details of how this project was deployed and the benefits of the various technologies used.
