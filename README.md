@@ -29,7 +29,7 @@ Technology Used
 
 Project Architecture
 
-<img src="https://ibm.box.com/s/tbp1e87642xnhzl8n797m5il0ru90bnr">
+<img src="https://raw.githubusercontent.com/bjdove/SMOP/master/images/Screen%20Shot%202019-07-25%20at%2012.53.19%20PM.png">
 
 Part 1: The Application
 
