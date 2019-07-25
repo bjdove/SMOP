@@ -1,6 +1,6 @@
 # SMOP
 Synthea Mass Opiod Project
-Dallas K8s Project - Public Market Team
+Dallas Py-R Project - Public Market Team
 
 This project is designed to show how kubernetes-based technologies can provide value when deploying, running, and managing applications. The application itself shows how a life sciences company can improve Oncology Research and Clinical Trials through improved engagement with patients using IoT devices. This application uses several IBM Cloud cognitive and data services with Node-Red at the core of the workload flow. The application is deployed into IKS and ICP for a multi-cloud deployment scenario to achieve resiliency & availability. Monitoring & management is accomplished using IBM's Multi-cloud manager.
 Getting Started
@@ -83,5 +83,5 @@ License
 This project is licensed as the intellectual property of IBM Corporation.
 Acknowledgments
 
-    Developed by Adam Torres, Alen Dranikov, Bruno Neves, Dayal Sachdev, Gary Stone, Kaleb Mekonnen, and William Burgess
+    Developed by Ava Terry, Chris Miner, Rajesh Kharta and Brian Dove.
     Thank you to our K8s enablement leaders!
