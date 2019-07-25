@@ -3,85 +3,46 @@ Synthea Mass Opiod Project
 
 Dallas Py-R Project - Public Market Team
 
-This project is designed to show how the IBM Watson suite of technologies can provide value in a practical way for data science applications. The data for this Application is based on Synthea or the Synthetic Patient Population Simulator. application itself shows how a life sciences company can improve Oncology Research and Clinical Trials through improved engagement with patients using IoT devices. This application uses several IBM Cloud cognitive and data services with Node-Red at the core of the workload flow. The application is deployed into IKS and ICP for a multi-cloud deployment scenario to achieve resiliency & availability. Monitoring & management is accomplished using IBM's Multi-cloud manager.
+This project is designed to show how the IBM Watson suite of technologies can provide value in a practical way for data science applications. This application will analyze and apply data science methods to identify the factors that contribute to opiod abuse. 
+The data for this Application is based on Synthea or the Synthetic Patient Population Simulator. (https://synthetichealth.github.io/synthea) More specifically we are using the synthetic data set built by Mitre called  SyntheticMass (https://synthea.mitre.org/about) - which is a dataset containing realistic but fictional residents of Massachusetts. This application uses several IBM Cloud cognitive and data services with Watson Studio at the core of the workload flow. The application will deploy a model into the IBM Cloud using Watson. Monitoring & management is accomplished using IBM's OpenScale.
+
 Getting Started
 
 The following documentation will discuss the details of how this project was deployed and the benefits of the various technologies used.
+
 Prerequisites
 
-The only tangible prerequisite for this project is a paid IBM Cloud account. For successful deployment, it is also important to have an understanding of cloud native application development, kubernetes systems, and other cloud technologies.
+The only tangible prerequisite for this project is a IBM Cloud account. For successful deployment, it is also important to have an understanding of IBM's cloud technologies.
 
 An IBM Cloud account can be obtained here
+
 Technology Used
 
-    IBM Kubernetes Service - IBM Public Cloud Kubernetes Service
-    IBM Cloud Private - IBM Private Cloud Kubernetes Service
-    RedHat Openshift - Red Hat Private Cloud Kubernetes Service
-    Multi-Cloud Manager - IBM tool to manage multi-cluster environments
-    IBM Node Red - Tool to manage & develop microservice workflows
-    IBM Cloudant - Scalable JSON Database
-    IBM Watson Assistant - IBM Watson Chatbot Service
-    IBM Watson Text to Speech - Watson Service to translate written text to audio output
-    IBM Watson Language Translator - Watson Service to translate written text from one language to another
-    IBM Key Protect - IBM Cloud Key Management Service
+    Google Cloud - Unified object storage for developers and enterprises 
+    IBM Cognos Analytics - cloud-based business intelligence and analytics solution
+    IBM DB2 on Cloud - A fully managed SQL cloud database. Easily deploy and scale on demand.
+    IBM Watson Studio - Cloud based data sceince solution
+    IBM Watson Knowledge Catalog - Watson Service to Catalog, understand, govern, analyze data
+    Python - an interpreted, high-level, general-purpose programming language
     IBM Cloud Object Storage - Resilient, Scalable, Affordable Object Storage
-    IBM Continuous Delivery - IBM Cloud tool to provide continuous delivery, integration, and other DevOps best practices
+    IBM OpenScale - platform tracks and measures outcomes from AI across its lifecycle
 
 Project Architecture
 
 alt text
 Part 1: The Application
 
-Info on the application flow itself & Node-Red goes here.
-
-Give an example
-
-Part 2: Kubernetes Clusters & Multi-Cloud Manager
-
-ICP, IKS, OCP, and MCM content goes here.
-
-Give an example
-
-Part 3: Additional Services
-
-Security, PVC to IBM COS, LDAP, etc goes here
-Persistent Volume: Cloud Object Storage
-
-We enabled our IKS cluster to write to IBM Cloud Object Storage. Writing to a persistent volume such as COS enables the data to still be available, even if the container, the worker node, or the cluster is removed. This is critical for stateful apps, core business data, data that must be available due to legal requirements, auditing, and data that must be accessed and shared across app instances.
-
-This is done by creation of a .yaml file that configures a persistent volume claim. This persistent volume claim has information about the cloud object storage bucket to be created that allows IBM Cloud to automate the creation of the bucket and communication of data to the bucket.
-
-kind: PersistentVolumeClaim
-apiVersion: v1
-metadata:
-  name: kube-cos-pvc
-  namespace: prod
-  annotations:
-    ibm.io/auto-create-bucket: "true"
-    ibm.io/auto-delete-bucket: "false"
-    ibm.io/bucket: "ikstestbucketburgess"
-    ibm.io/object-path: ""
-    ibm.io/secret-name: "cos-write-access"
-    ibm.io/endpoint: "https://s3.private.us-south.cloud-object-storage.appdomain.cloud"
-spec:
-  accessModes:
-    - ReadWriteOnce
-  resources:
-    requests:
-      storage: 8Gi 
-  storageClassName: ibmc-s3fs-flex-regional
-
-The following screenshot indicates successful creation of the PVC: alt text
-
-and the following screenshot shows the bucket that we created in IBM Cloud: alt text
+Info on the application flow itself goes here.
 
 Instructions to create IBM Cloud Object Storage as a persistent volume in your own cluster can be found here.
+
 Wrap up
 
 Anything else we need a section for?
 License
 
 This project is licensed as the intellectual property of IBM Corporation.
+
 Acknowledgments
 
     Developed by Ava Terry, Chris Miner, Rajesh Kartha and Brian Dove.
