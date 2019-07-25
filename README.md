@@ -29,7 +29,7 @@ Technology Used
 
 Project Architecture
 
-<img src="https://ibm.box.com/s/tbp1e87642xnhzl8n797m5il0ru90bnr"/>
+<img src="https://ibm.box.com/s/tbp1e87642xnhzl8n797m5il0ru90bnr">
 
 Part 1: The Application
 
